@@ -23,8 +23,6 @@ export default class tiempo {
         }else {
             return `${this.horas}: ${this.minutos} ${this.periodos}`
         }
-
-        return `${this}`
     }
 
 
