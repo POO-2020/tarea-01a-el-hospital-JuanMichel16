@@ -8,13 +8,17 @@ export default class nombre {
      */
 
     constructor(nombre, apellidoPaterno, apellidoMaterno) {
-        this.nombrePaciente = nombre
-        this.apellidoPaternoPaciente = apellidoPaterno
-        this.apellidoMaternoPaciente = apellidoMaterno
+        this.nombre = nombre
+        this.apellidoP = apellidoPaterno
+        this.apellidoM = apellidoMaterno
     }
 
     getNombreCompleto() {
-        return ` ${this.nombrePaciente} ${this.apellidoPaternoPaciente} ${this.apellidoMaternoPaciente}`
+        return ` ${this.nombre} ${this.apellidoP} ${this.apellidoM}`
+    }
+
+    getApellidoNombre() {
+        return ` ${this.apellidoP} ${this.apellidoM} ${this.nombre}`
     }
 
 
