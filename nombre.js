@@ -21,5 +21,19 @@ export default class nombre {
         return ` ${this.apellidoP} ${this.apellidoM} ${this.nombre}`
     }
 
+    getIniciales() {
 
+        var cadena = `${this.nombre} ${this.apellidoP} ${this.apellidoM}`,
+        separador = " ",
+        separar=[],
+        arregloDeSubCadenas = cadena.split(separador);
+
+        for (let x=0;x<arregloDeSubCadenas.length;x++){
+            separar[x] = arregloDeSubCadenas[x].substring(0, 1);
+
+    }
+
+    return `${separar}`
+
+    }
 }
