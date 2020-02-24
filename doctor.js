@@ -14,6 +14,6 @@ constructor(nombre, especialidad, telefono, cedula) {
 }
 
 getPerfil() {
-    return ` ${this.nombre}, ${this.especialidades}, ${this.telefonos}, ${this.cedulas} `
+    return ` ${this.cedulas}, ${this.especialidades}, ${this.nombre}, ${this.telefonos} `
 }
 }

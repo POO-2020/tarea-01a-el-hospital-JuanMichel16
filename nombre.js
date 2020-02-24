@@ -8,22 +8,22 @@ export default class nombre {
      */
 
     constructor(nombre, apellidoPaterno, apellidoMaterno) {
-        this.nombre = nombre
+        this.nombres = nombre
         this.apellidoP = apellidoPaterno
         this.apellidoM = apellidoMaterno
     }
 
     getNombreCompleto() {
-        return ` ${this.nombre} ${this.apellidoP} ${this.apellidoM}`
+        return ` ${this.nombres} ${this.apellidoP} ${this.apellidoM}`
     }
 
     getApellidoNombre() {
-        return ` ${this.apellidoP} ${this.apellidoM} ${this.nombre}`
+        return ` ${this.apellidoP} ${this.apellidoM} ${this.nombres}`
     }
 
     getIniciales() {
 
-        var cadena = `${this.nombre} ${this.apellidoP} ${this.apellidoM}`,
+        var cadena = `${this.nombres} ${this.apellidoP} ${this.apellidoM}`,
         separador = " ",
         separar=[],
         arregloDeSubCadenas = cadena.split(separador);

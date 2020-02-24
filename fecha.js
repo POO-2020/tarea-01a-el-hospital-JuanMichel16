@@ -1,6 +1,12 @@
 let conteo
 export default class Fecha {
 
+    /**
+     * 
+     * @param {number} dia 
+     * @param {number} mes 
+     * @param {number} año 
+     */
     constructor(dia, mes, año) {
         this.fechas = new date(dia, mes, año)
         this.dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
@@ -8,7 +14,7 @@ export default class Fecha {
     }
 
 getAños() {
-    let anosCumnplidos
+    let anosCumplidos
     anosCumplidos = 2020 - this.fechas.getFullYear()
     let conteo=anosCumplidos
     return `${anosCumnplidos}`
