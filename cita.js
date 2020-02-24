@@ -1,6 +1,7 @@
-import fecha from "./fecha.js"
-import nombre from "./nombre.js"
-import paciente from "./paciente.js"
+import Fecha from "./fecha.js"
+import Nombre from "./nombre.js"
+import Paciente from "./paciente.js"
+import Tiempo from "./tiempo.js"
 export default class Cita {
 
     /**

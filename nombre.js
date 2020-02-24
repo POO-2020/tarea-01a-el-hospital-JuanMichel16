@@ -1,4 +1,4 @@
-export default class nombre {
+export default class Nombre {
 
     /**
      * 

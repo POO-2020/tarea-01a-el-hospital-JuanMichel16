@@ -1,14 +1,18 @@
-import tiempo from "./tiempo.js"
-import nombre from "./nombre.js"
-import doctor from "./doctor.js"
-import fecha from "./fecha.js"
+import Tiempo from "./tiempo.js"
+import Nombre from "./nombre.js"
+import Doctor from "./doctor.js"
+import Fecha from "./fecha.js"
+import Paciente from "./paciente.js"
+import Cita from "./cita.js"
 
 class Main {
 constructor(){
-    this.tiempoNuevo = new tiempo(2,30,"pm")
-    this.nuevoNombre = new nombre("Juan Manuel", "Michel", "Vargas")
-    this.doctorNuevo = new doctor( "cirujano", 3122730867, 1233456 )
-    this.fechaNueva = new fecha(8, 10, 2019)
+    this.tiempoNuevo = new Tiempo(2,30,"pm")
+    this.nuevoNombre = new Nombre("Juan Manuel", "Michel", "Vargas")
+    this.doctorNuevo = new Doctor("cirujano", 3122730867, 1233456 )
+    this.fechaNueva = new Fecha(8, 10, 2019)
+    this.nuevoPaciente = new Paciente(this.nuevoNombre, this.fechaNueva, 31212313123)
+    this.nuevaCita = new Cita(this.fechaNueva, 3, this.nuevoNombre, this.nuevoPaciente)
 }
 probarTiempo(){
     console.log(`${this.tiempoNuevo.getFormato12()}`)
@@ -32,9 +36,19 @@ probarFecha() {
     console.log(`${this.fechaNueva.getFecha()}`)
     console.log(`${this.fechaNueva.getDiaFecha()}`)
 }
+
+ProbarPaciente() {
+    console.log(`${this.nuevoPaciente.getPerfil()}`)
+}
+
+ProbarCita() {
+    console.log(` ${this.nuevaCita.getPerfil}`)
+}
 }
 let app = new Main()
 app.probarNombre()
 app.probarTiempo()
 app.probarDoctor()
 app.probarFecha()
+app.ProbarPaciente()
+app.ProbarCita()

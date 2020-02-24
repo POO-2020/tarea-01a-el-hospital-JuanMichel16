@@ -1,4 +1,4 @@
-export default class tiempo {
+export default class Tiempo {
 
     /**
      * 
@@ -24,6 +24,5 @@ export default class tiempo {
             return `${this.horas}: ${this.minutos} ${this.periodos}`
         }
     }
-
 
 }
