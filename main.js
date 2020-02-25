@@ -4,15 +4,17 @@ import Doctor from "./doctor.js"
 import Fecha from "./fecha.js"
 import Paciente from "./paciente.js"
 import Cita from "./cita.js"
+import Hospital from "./hospital.js"
 
 class Main {
-constructor(){
-    this.tiempoNuevo = new Tiempo(2,30,"pm")
+    constructor() {
+    this.tiempoNuevo = new Tiempo (2,30,"pm")
     this.nuevoNombre = new Nombre("Juan Manuel", "Michel", "Vargas")
-    this.doctorNuevo = new Doctor("cirujano", 3122730867, 1233456 )
+    this.doctorNuevo = new Doctor(this.nuevoNombre,"cirujano", 3122730867, 1233456 )
     this.fechaNueva = new Fecha(8, 10, 2019)
     this.nuevoPaciente = new Paciente(this.nuevoNombre, this.fechaNueva, 31212313123)
-    this.nuevaCita = new Cita(this.fechaNueva, 3, this.nuevoNombre, this.nuevoPaciente)
+    this.nuevaCita = new Cita(this.fechaNueva, this.tiempoNuevo, this.nuevoNombre, this.nuevoPaciente)
+    this.hospitalNuevo = new Hospital
 }
 probarTiempo(){
     console.log(`${this.tiempoNuevo.getFormato12()}`)
@@ -42,7 +44,11 @@ ProbarPaciente() {
 }
 
 ProbarCita() {
-    console.log(` ${this.nuevaCita.getPerfil}`)
+    console.log(` ${this.nuevaCita.getPerfil()}`)
+}
+
+probarHospital() {
+    console.log ( ` ${this.hospitalNuevo.registrarDoctor()}`)
 }
 }
 let app = new Main()
@@ -52,3 +58,4 @@ app.probarDoctor()
 app.probarFecha()
 app.ProbarPaciente()
 app.ProbarCita()
+app.probarHospital()

@@ -1,5 +1,5 @@
 import nombre from "./nombre.js" 
-import fecha from ".fecha.js"
+import fecha from "./fecha.js"
 export default class Paciente {
 
     /**
@@ -16,6 +16,6 @@ export default class Paciente {
     }
 
 getPerfil() {
-    return `${this.nombre.getNombreCompleto()}, ${this.fechasNacimiento.getFecha()}, ${this.telefonos} `
+    return `${this.nombres.getNombreCompleto()}, ${this.fechasNacimiento.getFecha()}, ${this.telefonos} `
 }
 }

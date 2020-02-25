@@ -15,12 +15,12 @@ export default class Cita {
     constructor(fechaCita, horaCita, NombreDoctor, pacienteCita) {
         this.fechasCitas = fechaCita
         this.horaCitas = horaCita
-        this.NombreDoctores = NombreDoctor
+        this.nombreDoctores = NombreDoctor
         this.pacientesCitas = pacienteCita
     }
 
 getPerfil() {
-   return ` ${this.fechasCitas.getFecha()}, ${this.horaCitas}, DR. ${this.NombreDoctores.getNombrecompleto()}, Paciente: ${this.pacientesCitas.getNombrecompleto()}` 
+   return ` ${this.fechasCitas.getFecha()}, ${this.horaCitas.getFormato12()}, DR. ${this.nombreDoctores.getNombreCompleto()}, Paciente: ${this.pacientesCitas.getPerfil()}` 
     }
     
 }
