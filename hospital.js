@@ -10,29 +10,28 @@ export default class Hospital {
      * @param {String} citas 
      */
 
-    constructor(nombre, direccion, doctores, citas) {
+    constructor(nombre, direccion) {
         this.nombres = nombre
         this.direcciones = direccion
-        this.doctores = doctores
-        this.citas = citas
+        this.listarDoctores = []
+        this.listarCitas = []
 
 }
     
-registrarDoctor() {
-    let nuevo = new Doctor("Juan Michel Vargas", "Odolotologo", 1312334543, 63624554)
-    return ` ${nuevo}`
-
+getRegistrarDoctor(doctor){
+    this.doctores.push(doctor)
 }
-
-listarDoctores() {
-
+getListarDoctores(){
+    this.doctores.forEach((doctor,i) => {
+        console.log(`${doctor.getPerfil()}, ${i}`)
+    })
 }
-
-registrarCita() {
-
+getRegistrarCitas(cita){
+    this.citas.push(cita)
 }
-
-listarCitas() {
-
+getListarCitas(){
+    this.citas.forEach((cita,i) => {
+        console.log(`${cita.getCita()}, ${i}`)
+    })
 }
 }

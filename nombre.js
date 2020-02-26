@@ -30,9 +30,7 @@ export default class Nombre {
 
         for (let x=0;x<arregloDeSubCadenas.length;x++){
             separar[x] = arregloDeSubCadenas[x].substring(0, 1);
-
     }
-
     return `${separar}`
 
     }

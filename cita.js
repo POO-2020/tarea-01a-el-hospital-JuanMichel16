@@ -20,7 +20,7 @@ export default class Cita {
     }
 
 getPerfil() {
-   return ` ${this.fechasCitas.getFecha()}, ${this.horaCitas.getFormato12()}, DR. ${this.nombreDoctores.getNombreCompleto()}, Paciente: ${this.pacientesCitas.getPerfil()}` 
+   return ` ${this.fechasCitas.getFecha()}, ${this.horaCitas.getFormato12()}, DR. ${this.nombreDoctores.getNombreCompleto()}, Paciente: ${this.pacientesCitas.getNombreCompleto()}` 
     }
     
 }

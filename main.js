@@ -13,8 +13,8 @@ class Main {
     this.doctorNuevo = new Doctor(this.nuevoNombre,"cirujano", 3122730867, 1233456 )
     this.fechaNueva = new Fecha(8, 10, 2019)
     this.nuevoPaciente = new Paciente(this.nuevoNombre, this.fechaNueva, 31212313123)
-    this.nuevaCita = new Cita(this.fechaNueva, this.tiempoNuevo, this.nuevoNombre, this.nuevoPaciente)
-    this.hospitalNuevo = new Hospital
+    this.nuevaCita = new Cita(this.fechaNueva, this.tiempoNuevo, this.nuevoNombre, this.nuevoNombre)
+    this.hospitales = new Hospital("Hospital Gab", "Av. San Fernando #312")
 }
 probarTiempo(){
     console.log(`${this.tiempoNuevo.getFormato12()}`)
@@ -44,11 +44,15 @@ ProbarPaciente() {
 }
 
 ProbarCita() {
-    console.log(` ${this.nuevaCita.getPerfil()}`)
+    console.log(`${this.nuevaCita.getPerfil()}`)
 }
 
-probarHospital() {
-    console.log ( ` ${this.hospitalNuevo.registrarDoctor()}`)
+probarHospital(){
+    this.hospitales.getRegistrarDoctor(this.doctor1)
+    this.hospitales.getRegistrarCitas(this.citas)
+
+    this.hospitales.getListarDoctores()
+    this.hospitales.getListarCitas()
 }
 }
 let app = new Main()
