@@ -14,7 +14,7 @@ class Main {
     this.fechaNueva = new Fecha(8, 10, 2019)
     this.nuevoPaciente = new Paciente(this.nuevoNombre, this.fechaNueva, 31212313123)
     this.nuevaCita = new Cita(this.fechaNueva, this.tiempoNuevo, this.nuevoNombre, this.nuevoNombre)
-    this.hospitales = new Hospital("Hospital Gab", "Av. San Fernando #312")
+    this.hospitales = new Hospital("Hospital Manuel", "Av. San Fernando #312")
 }
 probarTiempo(){
     console.log(`${this.tiempoNuevo.getFormato12()}`)
@@ -48,8 +48,8 @@ ProbarCita() {
 }
 
 probarHospital(){
-    this.hospitales.getRegistrarDoctor(this.doctor1)
-    this.hospitales.getRegistrarCitas(this.citas)
+    this.hospitales.getRegistrarDoctor(this.doctorNuevo )
+    this.hospitales.getRegistrarCitas(this.nuevaCita)
 
     this.hospitales.getListarDoctores()
     this.hospitales.getListarCitas()

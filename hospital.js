@@ -19,19 +19,19 @@ export default class Hospital {
 }
     
 getRegistrarDoctor(doctor){
-    this.doctores.push(doctor)
+    this.listarDoctores.push(doctor)
 }
 getListarDoctores(){
-    this.doctores.forEach((doctor,i) => {
+    this.listarDoctores.forEach((doctor,i) => {
         console.log(`${doctor.getPerfil()}, ${i}`)
     })
 }
 getRegistrarCitas(cita){
-    this.citas.push(cita)
+    this.listarCitas.push(cita)
 }
 getListarCitas(){
-    this.citas.forEach((cita,i) => {
-        console.log(`${cita.getCita()}, ${i}`)
+    this.listarCitas.forEach((cita,i) => {
+        console.log(`${cita.getPerfil()}, ${i}`)
     })
 }
 }
